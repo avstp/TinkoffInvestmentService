@@ -17,7 +17,7 @@
         <java.version>11</java.version>
         <tinkoffInvestVersion>0.5.2</tinkoffInvestVersion>
         <okhttpVersion>4.9.3</okhttpVersion>
-        <openApiVersion>1.6.7</openApiVersion>
+        <openApiVersion>1.6.4</openApiVersion>
     </properties>
     <dependencies>
         <dependency>
@@ -53,7 +53,6 @@
             <version>${okhttpVersion}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
