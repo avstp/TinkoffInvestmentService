@@ -14,7 +14,7 @@ public class AsyncStockServiceImpl implements AsyncStockService{
     private final OpenApi openApi;
 
     @Override
-    @Async
+    @Async("stockThreadPoolTaskExecutor")
     public CompletableFuture<MarketInstrumentList> getMarketInstrumentByTicker(String ticker) {
         MarketContext marketContext = openApi.getMarketContext();
         return marketContext.searchMarketInstrumentsByTicker(ticker);
