@@ -1,5 +1,7 @@
 package com.avstp.tinkoffinvestmentservice.controller;
 
+import com.avstp.tinkoffinvestmentservice.dto.FigiesDto;
+import com.avstp.tinkoffinvestmentservice.dto.StockPricesDto;
 import com.avstp.tinkoffinvestmentservice.dto.StocksDto;
 import com.avstp.tinkoffinvestmentservice.dto.TickersDto;
 import com.avstp.tinkoffinvestmentservice.model.Stock;
@@ -24,5 +26,10 @@ public class StockController {
     @GetMapping
     public StocksDto getStockList(TickersDto tickersDto) {
         return stockService.getStocksByTickers(tickersDto);
+    }
+
+    @GetMapping("/price")
+    public StockPricesDto getPriceList(FigiesDto figiesDto) {
+        return stockService.getPrices(figiesDto);
     }
 }
